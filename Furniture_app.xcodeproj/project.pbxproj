@@ -13,6 +13,8 @@
 		8804739E25D8C14400F9A279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8804739D25D8C14400F9A279 /* Preview Assets.xcassets */; };
 		880473A925D8C14400F9A279 /* Furniture_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880473A825D8C14400F9A279 /* Furniture_appTests.swift */; };
 		880473B425D8C14400F9A279 /* Furniture_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880473B325D8C14400F9A279 /* Furniture_appUITests.swift */; };
+		880473C725D8C1D200F9A279 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 880473C525D8C1D200F9A279 /* PlayfairDisplay-Regular.ttf */; };
+		880473C825D8C1D200F9A279 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 880473C625D8C1D200F9A279 /* PlayfairDisplay-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		880473AF25D8C14400F9A279 /* Furniture_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Furniture_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		880473B325D8C14400F9A279 /* Furniture_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture_appUITests.swift; sourceTree = "<group>"; };
 		880473B525D8C14400F9A279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880473C525D8C1D200F9A279 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		880473C625D8C1D200F9A279 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		8804739525D8C14200F9A279 /* Furniture_app */ = {
 			isa = PBXGroup;
 			children = (
+				880473C425D8C19E00F9A279 /* Fonts */,
 				8804739625D8C14200F9A279 /* Furniture_appApp.swift */,
 				8804739825D8C14200F9A279 /* ContentView.swift */,
 				8804739A25D8C14400F9A279 /* Assets.xcassets */,
@@ -128,6 +133,15 @@
 				880473B525D8C14400F9A279 /* Info.plist */,
 			);
 			path = Furniture_appUITests;
+			sourceTree = "<group>";
+		};
+		880473C425D8C19E00F9A279 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				880473C625D8C1D200F9A279 /* PlayfairDisplay-Bold.ttf */,
+				880473C525D8C1D200F9A279 /* PlayfairDisplay-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880473C825D8C1D200F9A279 /* PlayfairDisplay-Bold.ttf in Resources */,
 				8804739E25D8C14400F9A279 /* Preview Assets.xcassets in Resources */,
 				8804739B25D8C14400F9A279 /* Assets.xcassets in Resources */,
+				880473C725D8C1D200F9A279 /* PlayfairDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
