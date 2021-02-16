@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88044CAE25DACF81006C446F /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88044CAD25DACF81006C446F /* DetailScreen.swift */; };
 		8804739725D8C14200F9A279 /* Furniture_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8804739625D8C14200F9A279 /* Furniture_appApp.swift */; };
 		8804739925D8C14200F9A279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8804739825D8C14200F9A279 /* ContentView.swift */; };
 		8804739B25D8C14400F9A279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8804739A25D8C14400F9A279 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88044CAD25DACF81006C446F /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		8804739325D8C14200F9A279 /* Furniture_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furniture_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8804739625D8C14200F9A279 /* Furniture_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture_appApp.swift; sourceTree = "<group>"; };
 		8804739825D8C14200F9A279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				885A598325D98409003A6F78 /* HomeScreen.swift */,
+				88044CAD25DACF81006C446F /* DetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88044CAE25DACF81006C446F /* DetailScreen.swift in Sources */,
 				8804739925D8C14200F9A279 /* ContentView.swift in Sources */,
 				8804739725D8C14200F9A279 /* Furniture_appApp.swift in Sources */,
 				885A598425D98409003A6F78 /* HomeScreen.swift in Sources */,

@@ -13,68 +13,77 @@ struct HomeScreen: View {
     
     private let categories = ["All", "Chair", "Sofa", "Lamp", "Kitchen", "Table"]
     var body: some View {
-        ZStack {
-            Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
-                .ignoresSafeArea()
-            
-            
-            
-            ScrollView (showsIndicators: false) {
-                VStack (alignment: .leading) {
-                    
-                    AppBarView()
-                    
-                    TagLineView()
-                        .padding()
-                    
-                    SearchAndScanView(search: $search)
-                    
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(0 ..< categories.count) { i in
-                                Button(action: {selectedIndex = i}) {
-                                    CategoryView(isActive: selectedIndex == i, text: categories[i])
+        NavigationView {
+            ZStack {
+                Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
+                    .ignoresSafeArea()
+                
+                ScrollView (showsIndicators: false) {
+                    VStack (alignment: .leading) {
+                        
+                        AppBarView()
+                        
+                        TagLineView()
+                            .padding()
+                        
+                        SearchAndScanView(search: $search)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0 ..< categories.count) { i in
+                                    Button(action: {selectedIndex = i}) {
+                                        CategoryView(isActive: selectedIndex == i, text: categories[i])
+                                    }
                                 }
                             }
+                            .padding()
                         }
-                        .padding()
-                    }
-                    
-                    Text("Popular")
-                        .font(.custom("PlayfairDisplay-Bold", size: 24))
-                        .padding(.horizontal)
-                    
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 0) {
-                            ForEach(0 ..< 4) { i in
-                                ProductCardView(image: Image("chair_\(i+1)"), size: 210)
+                        
+                        Text("Popular")
+                            .font(.custom("PlayfairDisplay-Bold", size: 24))
+                            .padding(.horizontal)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack (spacing: 0) {
+                                ForEach(0 ..< 4) { i in
+                                    NavigationLink(
+                                        destination: DetailScreen(),
+                                        label: {
+                                            ProductCardView(image: Image("chair_\(i+1)"), size: 210)
+                                        })
+                                        .navigationBarHidden(true)
+                                        .foregroundColor(.black)
+                                }
+                                .padding(.leading)
                             }
-                            .padding(.leading)
                         }
-                    }
-                    .padding(.bottom)
-                    
-                    Text("Best")
-                        .font(.custom("PlayfairDisplay-Bold", size: 24))
-                        .padding(.horizontal)
-                    
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 0) {
-                            ForEach(0 ..< 4) { i in
-                                ProductCardView(image: Image("chair_\(4-i)"), size: 180)
+                        .padding(.bottom)
+                        
+                        Text("Best")
+                            .font(.custom("PlayfairDisplay-Bold", size: 24))
+                            .padding(.horizontal)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack (spacing: 0) {
+                                ForEach(0 ..< 4) { i in
+                                    ProductCardView(image: Image("chair_\(4-i)"), size: 180)
+                                }
+                                .padding(.leading)
                             }
-                            .padding(.leading)
                         }
+                        
                     }
-                    
+                }
+                
+                VStack {
+                    Spacer()
+                    BottomNavBarView()
                 }
             }
-            
-            VStack {
-                Spacer()
-                BottomNavBarView()
-            }
         }
+//        .navigationBarTitle("") //this must be empty
+//        .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true)
     }
 }
 
